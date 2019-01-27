@@ -25,10 +25,10 @@ class Feelings extends Component {
         event.preventDefault();
         if (this.state.response != '') {
             const action = {type: 'SUBMIT_FEELINGS', payload: this.state.response}
-        this.props.dispatch(action);
-        this.props.history.push('/understanding');
+            this.props.dispatch(action);
+            this.props.history.push('/understanding');
         } else {
-            alert('Please fill in a response before proceeding.')
+            alert('Please fill in a response.')
         }
     } //end handleNextButton
 

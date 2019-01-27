@@ -11,9 +11,32 @@ import Typography from '@material-ui/core/Typography';
 
 class Understanding extends Component {
 
-    handleNextButton = () => {
-        this.props.history.push('/supported');
+    constructor() {
+        super();
+        this.state = {
+            response: '',
+        }
     }
+
+    //This will take the users input and dispatch to the understandingReducer
+    //which will log the return value to the review card
+    handleNextButton = (event) => {
+        event.preventDefault();
+        if (this.state.response != '') {
+            const action = {type: 'SUBMIT_UNDERSTANDING', payload: this.state.response}
+            this.props.dispatch(action);
+            this.props.history.push('/supported');
+        } else {
+            alert('Please fill in a response.');
+        }
+    } //end handleNextButton
+
+    handleChange = (event) => {
+        this.setState({
+            response: event.target.value,
+        })
+        console.log(this.response);
+    } //end handleChange
 
     render() {
         return(
@@ -27,6 +50,7 @@ class Understanding extends Component {
 
                         <Typography variant="h5" component="h2">
                             <TextField
+                                onChange={this.handleChange}
                                 id='understandingInput'
                                 label='Understanding?'
                                 placeholder='From 1 and 5'

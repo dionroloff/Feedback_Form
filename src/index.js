@@ -20,9 +20,19 @@ const feelingReducer = (state = '', action) => {
     return state;
 } //end feelingsReducer
 
+//This reducer will run when the user clicks submit on understanding page
+const understandingReducer = (state = '', action) => {
+    if (action.type === 'SUBMIT_UNDERSTANDING') {
+        console.log('in understandingReducer');
+        return action.payload;
+    }
+    return state;
+} //end understandingReducer
+
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
+        understandingReducer,
     }),
     applyMiddleware(logger),
 )

@@ -4,9 +4,13 @@ import {connect} from 'react-redux';
 class ReviewUnderstandings extends Component {
     render() {
         return(
-            <p>Understanding: </p>
+            <p>Understanding: {this.props.reduxStore.understandingReducer}</p>
         )
     }
 }
 
-export default connect()(ReviewUnderstandings);
+const mapReduxStoreToProps = (reduxStore) => ({
+    reduxStore: reduxStore,
+});
+
+export default connect(mapReduxStoreToProps)(ReviewUnderstandings);
