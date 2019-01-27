@@ -16,15 +16,22 @@ import Typography from '@material-ui/core/Typography';
 
 class Review extends Component {
 
-    constructor() {
-        super(); {
-            this.state = {
-                value: '',
-            }
-        }
+    // constructor() {
+    //     super(); {
+    //         this.state = {
+    //             isEnabled: '',
+    //         }
+    //     }
+    // }
+
+    turnOnButton = () => {
+        
     }
 
     render() {
+
+        const isEnabled = this.props.reduxStore.commentsReducer !== '';
+
         const bull = <p>•</p>;
         return (
             <div className='review-card'>
@@ -45,7 +52,7 @@ class Review extends Component {
                             {bull}
                         </Typography>
                         <CardActions>
-                            <Button disabled={!this.state.value}>Incomplete</Button>
+                            <Button disabled={!isEnabled}>Submit</Button>
                         </CardActions>
                     </CardContent>
                 </Card>
