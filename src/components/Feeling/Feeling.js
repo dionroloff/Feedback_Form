@@ -23,7 +23,7 @@ class Feelings extends Component {
     //to feelingsReducer in index.js
     handleNextButton = (event) => {
         event.preventDefault();
-        if (this.state.response != '') {
+        if (this.state.response !== '') {
             const action = {type: 'SUBMIT_FEELINGS', payload: this.state.response}
             this.props.dispatch(action);
             this.props.history.push('/understanding');

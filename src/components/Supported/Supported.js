@@ -23,7 +23,7 @@ class Supported extends Component {
     //the review card at the bottom of the screen
     handleNextButton = (event) => {
         event.preventDefault();
-        if (this.state.response != '') {
+        if (this.state.response !== '') {
             const action = {type: 'SUBMIT_SUPPORT', payload: this.state.response};
             this.props.dispatch(action);
             this.props.history.push('/comments');

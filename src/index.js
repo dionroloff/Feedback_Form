@@ -38,11 +38,21 @@ const supportReducer = (state = '', action) => {
     return state;
 } //end supportReducer
 
+//this reducer will run when the user clicks submit on the comments page
+const commentsReducer = (state = '', action) => {
+    if (action.type === 'SUBMIT_COMMENTS') {
+        console.log('in commentsReducer');
+        return action.payload;
+    }
+    return state;
+} //end commentsReducer
+
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
         supportReducer,
+        commentsReducer
     }),
     applyMiddleware(logger),
 )

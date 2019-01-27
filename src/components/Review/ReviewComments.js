@@ -5,9 +5,13 @@ import {connect} from 'react-redux';
 class ReviewComments extends Component {
     render() {
         return(
-            <p>Comments: </p>
+            <p>Comments: {this.props.reduxStore.commentsReducer}</p>
         )
     }
 }
 
-export default connect()(ReviewComments);
+const mapReduxStoreToProps = (reduxStore) => ({
+    reduxStore
+})
+
+export default connect(mapReduxStoreToProps)(ReviewComments);

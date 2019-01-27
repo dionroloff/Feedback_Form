@@ -20,6 +20,27 @@ class Comments extends Component {
         }
     }
 
+    //When the user clicks the next button on the comments page, the input
+    //will dispatch to the commentsReducer function, which will
+    //render the return value on the review card
+    handleNextButton = (event) => {
+        event.preventDefault();
+        if (this.state.response !== '') {
+            const action = {type: 'SUBMIT_COMMENTS', payload: this.state.response};
+            this.props.dispatch(action);
+            this.props.history.push('/review');
+        } else {
+            alert('Please fill in a response.');
+        }
+    } //end handleNextButton
+
+    //sets state to user's comments
+    handleChange = (event) => {
+        this.setState({
+            response: event.target.value,
+        })
+    } //end handleChange
+
     render() {
         return(
             <div>
@@ -32,6 +53,7 @@ class Comments extends Component {
 
                         <Typography variant="h5" component="h2">
                             <TextField
+                                onChange={this.handleChange}
                                 id='commentsInput'
                                 label='Comments?'
                                 placeholder='Write here.'
@@ -40,7 +62,7 @@ class Comments extends Component {
 
                     </CardContent>
                     <CardActions>
-                    <Button id='comments-next-btn' variant='contained' color='primary'>
+                    <Button id='comments-next-btn' variant='contained' color='primary' onClick={this.handleNextButton}>
                         Next
                     </Button>
                     </CardActions>

@@ -22,7 +22,7 @@ class Understanding extends Component {
     //which will log the return value to the review card
     handleNextButton = (event) => {
         event.preventDefault();
-        if (this.state.response != '') {
+        if (this.state.response !== '') {
             const action = {type: 'SUBMIT_UNDERSTANDING', payload: this.state.response}
             this.props.dispatch(action);
             this.props.history.push('/supported');
