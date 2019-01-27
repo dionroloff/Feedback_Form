@@ -42,6 +42,7 @@ class Comments extends Component {
     } //end handleChange
 
     render() {
+        console.log(this.state.response);
         return(
             <div>
                 <Card>

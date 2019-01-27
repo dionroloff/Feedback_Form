@@ -56,6 +56,7 @@ class Review extends Component {
     } //end sendToDb
 
     render() {
+        console.log(this.state);
 
         // const userInputs = {
         //     feeling: Number(this.props.reduxStore.feelingReducer),

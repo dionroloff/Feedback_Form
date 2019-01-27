@@ -39,6 +39,7 @@ class Supported extends Component {
     }
 
     render() {
+        console.log(this.state.response);
         return(
             <div>
                 <Card>

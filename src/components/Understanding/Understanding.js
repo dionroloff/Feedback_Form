@@ -35,10 +35,10 @@ class Understanding extends Component {
         this.setState({
             response: event.target.value,
         })
-        console.log(this.response);
     } //end handleChange
 
     render() {
+        console.log(this.state.response);
         return(
             <div>
                 <Card>

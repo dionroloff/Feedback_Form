@@ -36,10 +36,10 @@ class Feelings extends Component {
         this.setState({
             response: event.target.value,
         })
-        console.log(this.state.response);
     } //end handleChange
 
     render() {
+        console.log(this.state.response);
         return (
             <div>
                 <Card>

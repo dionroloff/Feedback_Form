@@ -11,12 +11,13 @@ router.post('/user-inputs', (req, res) => {
         INSERT INTO "feedback" ("feeling", "understanding", "support", "comments") 
         VALUES ($1, $2, $3, $4);
     `, [req.body.feeling, req.body.understanding, req.body.support, req.body.comments])
-    .then(result => {
+    .then((result) => {
+        console.log(result);
         res.sendStatus(201);
     }).catch((error) => {
         console.log('ERROR in POST', error);
         res.sendStatus(500);
     })
-}
+})
 
 module.exports = router;
