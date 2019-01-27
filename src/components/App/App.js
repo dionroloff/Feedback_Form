@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
-//import components
+//Components
 import Comments from './../Comments/Comments.js';
 import Feeling from './../Feeling/Feeling.js';
 import Supported from './../Supported/Supported.js';
