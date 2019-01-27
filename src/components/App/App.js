@@ -29,19 +29,19 @@ class App extends Component {
         <Router>
           <div>
             {/* Links */}
-            <Link to='/feeling'>How are you feeling</Link>
-            <Link to='/understanding'>How are you understanding the material</Link>
-            <Link to='/supported'>Do you feel supported</Link>
-            <Link to='/comments'>Any comments?</Link>
-            <Link to='/thank-you'>Thank you page</Link>
-            <Link to='/review'>Review</Link>
+            <Link to='/feeling'> How are you feeling |</Link>
+            <Link to='/understanding'> How are you understanding the material |</Link>
+            <Link to='/supported'> Do you feel supported |</Link>
+            <Link to='/comments'> Any comments? |</Link>
+            <Link to='/thank-you'> Thank you page |</Link>
+            <Link to='/review'> Review |</Link>
 
             {/* Routes */}
-            <Route exact path={'/feeling'} compnent={Feeling} />
-            <Route exact path={'/understanding'} compnent={Understanding} />
-            <Route exact path={'/supported'} compnent={Supported} />
-            <Route exact path={'/comments'} compnent={Comments} />
-            <Route exact path={'/thank-you'} compnent={ThankYou} />
+            <Route exact path={'/feeling'} component={Feeling} />
+            <Route exact path={'/understanding'} component={Understanding} />
+            <Route exact path={'/supported'} component={Supported} />
+            <Route exact path={'/comments'} component={Comments} />
+            <Route exact path={'/thank-you'} component={ThankYou} />
             <Route exact path={'/review'} component={Review} />
           
           </div>

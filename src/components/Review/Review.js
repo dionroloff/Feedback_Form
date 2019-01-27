@@ -8,14 +8,24 @@ import ReviewSupport from './ReviewSupport.js';
 import ReviewComments from './ReviewComments';
 
 class Review extends Component {
+
+    constructor() {
+        super(); {
+            this.state = {
+                value: '',
+            }
+        }
+    }
+
     render() {
         return(
-            <div>
+            <div className='review-card'>
+                <h3>Review Your Feedback</h3>
                 <ReviewFeelings />
                 <ReviewUnderstanding />
                 <ReviewSupport />
                 <ReviewComments />
-                <button>Incomplete</button>
+                <button disabled={!this.state.value}>Incomplete</button>
             </div> 
         )
     }

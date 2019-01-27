@@ -3,15 +3,15 @@ import {connect} from 'react-redux';
 
 class ThankYou extends Component {
     
-    returnToFeeling = () => {
-        this.props.history.push('/feeling');
-    }
+    // returnToStart = () => {
+    //     this.props.history.push('/feeling');
+    // }
     
     render() {
         return(
             <div>
                 <h1>Thank You!</h1>
-                <button onClick={this.returnToFeeling}>Leave New Feedback</button>
+                <button onClick={this.returnToStart}>Leave New Feedback</button>
             </div>
         )
     }

@@ -1,0 +1,11 @@
+.container {
+    display: flex,
+    /* flexWrap: wrap, */
+
+}
+
+#feelingIn {
+    /* marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit, */
+    width: 200,
+}
