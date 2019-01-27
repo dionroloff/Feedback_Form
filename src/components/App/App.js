@@ -29,7 +29,7 @@ class App extends Component {
         <Router>
           <div>
             {/* Links */}
-            <Link to='/feeling'> How are you feeling |</Link>
+            <Link to='/'> How are you feeling |</Link>
             <Link to='/understanding'> How are you understanding the material |</Link>
             <Link to='/supported'> Do you feel supported |</Link>
             <Link to='/comments'> Any comments? |</Link>
@@ -37,7 +37,7 @@ class App extends Component {
             <Link to='/review'> Review |</Link>
 
             {/* Routes */}
-            <Route exact path={'/feeling'} component={Feeling} />
+            <Route exact path={'/'} component={Feeling} />
             <Route exact path={'/understanding'} component={Understanding} />
             <Route exact path={'/supported'} component={Supported} />
             <Route exact path={'/comments'} component={Comments} />

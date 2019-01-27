@@ -17,3 +17,7 @@
   font-size: large;
 }
 
+#submit-button {
+  justify-content: right;
+}
+

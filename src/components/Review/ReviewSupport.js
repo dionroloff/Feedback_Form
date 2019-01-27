@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 class ReviewSupport extends Component {
     render() {
         return(
-            <p>Support: {this.props.reduxStore.supportReducer} out of 5</p>
+            <p>Support: {this.props.reduxStore.supportReducer}</p>
         )
     }
 }

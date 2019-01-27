@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+//Lines 13 and 14 added by me.
+const userRouter = require('./routes/userInputs.router.js');
+app.use('/user-inputs', userRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
