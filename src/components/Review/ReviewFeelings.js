@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 class ReviewFeelings extends Component {
     render() {
         return(
-            <p>Feelings: {this.props.reduxStore.feelingReducer}</p>
+            <p>Feelings: {this.props.reduxStore.feelingReducer} out of 5</p>
         )
     }
 }

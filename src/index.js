@@ -29,10 +29,20 @@ const understandingReducer = (state = '', action) => {
     return state;
 } //end understandingReducer
 
+//This reducer will run when the user clicks submit on the support page
+const supportReducer = (state = '', action) => {
+    if (action.type === 'SUBMIT_SUPPORT') {
+        console.log('in supportReducer');
+        return action.payload;
+    }
+    return state;
+} //end supportReducer
+
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
+        supportReducer,
     }),
     applyMiddleware(logger),
 )
