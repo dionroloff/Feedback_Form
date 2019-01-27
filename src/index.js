@@ -11,11 +11,18 @@ import {logger} from 'redux-logger';
 
 //My reducers
 
-//
+//This reducer will run when user clicks submit on feelings page
+const feelingReducer = (state = '', action) => {
+    if (action.type === 'SUBMIT_FEELINGS') {
+        console.log('in feelingReducer');
+        return action.payload;
+    }
+    return state;
+} //end feelingsReducer
 
 const storeInstance = createStore(
     combineReducers({
-
+        feelingReducer,
     }),
     applyMiddleware(logger),
 )

@@ -25,6 +25,7 @@ class Review extends Component {
     }
 
     render() {
+        const bull = <p>•</p>;
         return (
             <div className='review-card'>
                 <Card>
@@ -33,10 +34,15 @@ class Review extends Component {
                             <h2>Review Your Feedback</h2>
                         </Typography>
                         <Typography color='textSecondary'>
+                            {bull}
                             <ReviewFeelings />
+                            {bull}
                             <ReviewUnderstanding />
+                            {bull}
                             <ReviewSupport />
+                            {bull}
                             <ReviewComments />
+                            {bull}
                         </Typography>
                         <CardActions>
                             <Button disabled={!this.state.value}>Incomplete</Button>

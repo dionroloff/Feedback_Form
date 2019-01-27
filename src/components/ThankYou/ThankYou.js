@@ -9,9 +9,9 @@ import Typography from '@material-ui/core/Typography';
 
 class ThankYou extends Component {
 
-    // returnToStart = () => {
-    //     this.props.history.push('/feeling');
-    // }
+    returnToStart = () => {
+        this.props.history.push('/feeling');
+    }
 
     render() {
         return (

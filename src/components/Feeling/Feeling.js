@@ -12,9 +12,32 @@ import Typography from '@material-ui/core/Typography';
 
 class Feelings extends Component {
 
-    handleNextButton = () => {
-        this.props.history.push('/understanding');
+    constructor() {
+        super();
+        this.state = {
+            response: '',
+        }
     }
+
+    //After the user inputs a number and clicks submit, payload is dispatched
+    //to feelingsReducer in index.js
+    handleNextButton = (event) => {
+        event.preventDefault();
+        if (this.state.response != '') {
+            const action = {type: 'SUBMIT_FEELINGS', payload: this.state.response}
+        this.props.dispatch(action);
+        this.props.history.push('/understanding');
+        } else {
+            alert('Please fill in a response before proceeding.')
+        }
+    } //end handleNextButton
+
+    handleChange = (event) => {
+        this.setState({
+            response: event.target.value,
+        })
+        console.log(this.state.response);
+    } //end handleChange
 
     render() {
         return (
@@ -28,10 +51,12 @@ class Feelings extends Component {
 
                         <Typography variant="h5" component="h2">
                             <TextField
+                                onChange={this.handleChange}
                                 id='feelingInput'
                                 label='Feeling?'
                                 placeholder='From 1 and 5'
-                                multiline margin='normal' />
+                                multiline margin='normal' 
+                                require />
                         </Typography>
 
                     </CardContent>
