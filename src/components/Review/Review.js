@@ -18,15 +18,6 @@ import Typography from '@material-ui/core/Typography';
 
 class Review extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            feeling: '',
-            understanding: '',
-            support: '',
-            comments: ''
-        }
-    }
 
     //Collects all the user's inputs from
     //the respective reducers, package that data into
@@ -35,17 +26,17 @@ class Review extends Component {
     //the thank you page.
     sendToDb = () => {
 
-        this.setState({
+        const dataForServer = {
             feeling: Number(this.props.reduxStore.feelingReducer),
             understanding: Number(this.props.reduxStore.understandingReducer),
             support: Number(this.props.reduxStore.supportReducer),
             comments: this.props.reduxStore.commentsReducer
-        });
+        };
 
         axios({
             method: 'POST',
             url: '/user-inputs',
-            data: this.state
+            data: dataForServer
         }).then((response) => {
             this.props.history.push('/thank-you');
         }).catch((error) => {
@@ -56,7 +47,7 @@ class Review extends Component {
     } //end sendToDb
 
     render() {
-        console.log(this.state);
+        //console.log(this.state);
         const isEnabled = this.props.reduxStore.commentsReducer !== '';
         const bull = <p>•</p>;
         

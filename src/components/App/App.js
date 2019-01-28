@@ -20,9 +20,6 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
-        {/* Each part of the form needs to be at its own route */}
-        {/* Clicking next should move the user to the appropriate step 
-        in the process asd well as update the review component */}
 
         {/* Hashrouter */}
         <Router>
