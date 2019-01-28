@@ -3,17 +3,7 @@ import {connect} from 'react-redux';
 
 
 class ReviewComments extends Component {
-
-    // componentDidMount = () => {
-    //     this.ableClick();
-    // }
-
-    // ableClick = () => {
-    //     if (this.props.reduxStore.commentsReducer !== '') {
-
-    //     }
-    // }
-
+    
     render() {
         return(
             <p>Comments: {this.props.reduxStore.commentsReducer}</p>

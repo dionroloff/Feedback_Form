@@ -57,14 +57,6 @@ class Review extends Component {
 
     render() {
         console.log(this.state);
-
-        // const userInputs = {
-        //     feeling: Number(this.props.reduxStore.feelingReducer),
-        //     understanding: Number(this.props.reduxStore.understandingReducer),
-        //     support: Number(this.props.reduxStore.supportReducer),
-        //     comments: this.props.reduxStore.commentsReducer
-        // }
-
         const isEnabled = this.props.reduxStore.commentsReducer !== '';
         const bull = <p>•</p>;
         

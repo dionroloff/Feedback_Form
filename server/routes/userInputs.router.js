@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 //POST the user inputs
-router.post('/user-inputs', (req, res) => {
+router.post('/', (req, res) => {
     console.log(req.body);
 
     pool.query(`
