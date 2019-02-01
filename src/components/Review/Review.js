@@ -9,6 +9,7 @@ import ReviewSupport from './ReviewSupport.js';
 import ReviewComments from './ReviewComments';
 import './../App/App.css';
 //Material UI
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -43,35 +44,39 @@ class Review extends Component {
             const errorMessage = `Server error: ${error}`;
             alert(errorMessage);
         })
-        
+
     } //end sendToDb
 
     render() {
         //console.log(this.state);
         const isEnabled = this.props.reduxStore.commentsReducer !== '';
         const bull = <p>•</p>;
-        
+
         return (
-            <div className='review-card'>
-                <Card>
-                    <CardContent >
-                        <Typography color='textPrimary'>
-                            <h2>Review Your Feedback</h2>
-                        </Typography>
-                        <Typography color='textSecondary'>
-                            {bull}
-                            <ReviewFeelings />
-                            <ReviewUnderstanding />
-                            <ReviewSupport />
-                            <ReviewComments />
-                            {bull}
-                        </Typography>
-                        <CardActions>
-                            <Button id='submit-button' disabled={!isEnabled} onClick={this.sendToDb}>Submit</Button>
-                        </CardActions>
-                    </CardContent>
-                </Card>
-            </div>
+            <Grid container justify="center">
+                <Grid item xs={9}>
+                    <Card>
+                        <CardContent >
+                            <Typography color='textPrimary'>
+                                <h2>Review Your Feedback</h2>
+                            </Typography>
+                            <Typography color='textSecondary'>
+                                {bull}
+                                <ReviewFeelings />
+                                <ReviewUnderstanding />
+                                <ReviewSupport />
+                                <ReviewComments />
+                                {bull}
+                            </Typography>
+                            <Grid container justify="center">
+                                <CardActions>
+                                    <Button id='submit-button' disabled={!isEnabled} onClick={this.sendToDb}>Submit</Button>
+                                </CardActions>
+                            </Grid>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
         )
     }
 }

@@ -3,10 +3,11 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #E1AD45;
   min-height: 70px;
   padding: 20px;
   color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-title {

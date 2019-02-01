@@ -24,13 +24,6 @@ class App extends Component {
         {/* Hashrouter */}
         <Router>
           <div>
-            {/* Links */}
-            {/* <Link to='/'> How are you feeling |</Link>
-            <Link to='/understanding'> How are you understanding the material |</Link>
-            <Link to='/supported'> Do you feel supported |</Link>
-            <Link to='/comments'> Any comments? |</Link>
-            <Link to='/thank-you'> Thank you page |</Link>
-            <Link to='/review'> Review |</Link> */}
 
             {/* Routes */}
             <Route exact path={'/'} component={Feeling} />
