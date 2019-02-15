@@ -1,8 +1,9 @@
 //Comments.js
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
 //Material UI
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -26,7 +27,7 @@ class Comments extends Component {
     handleNextButton = (event) => {
         event.preventDefault();
         if (this.state.response !== '') {
-            const action = {type: 'SUBMIT_COMMENTS', payload: this.state.response};
+            const action = { type: 'SUBMIT_COMMENTS', payload: this.state.response };
             this.props.dispatch(action);
             this.props.history.push('/review');
         } else {
@@ -43,7 +44,7 @@ class Comments extends Component {
 
     render() {
         console.log(this.state.response);
-        return(
+        return (
             <div>
                 <Card>
                     <CardContent>
@@ -63,14 +64,16 @@ class Comments extends Component {
 
                     </CardContent>
                     <CardActions>
-                    <Button id='comments-next-btn' variant='contained' color='primary' onClick={this.handleNextButton}>
-                        Next
-                    </Button>
+                        <Grid container justify="center">
+                            <Button id='comments-next-btn' variant='contained' color='primary' onClick={this.handleNextButton}>
+                                Next
+                            </Button>
+                        </Grid>
                     </CardActions>
                 </Card>
                 <Card>
                     <CardContent>
-                        <Review /> 
+                        <Review />
                     </CardContent>
                 </Card>
             </div>

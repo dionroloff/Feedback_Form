@@ -1,7 +1,7 @@
 //App.js
-import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import React, { Component } from 'react'
 import './App.css';
+import { HashRouter as Router, Route} from 'react-router-dom';
 
 //Components
 import Comments from './../Comments/Comments.js';

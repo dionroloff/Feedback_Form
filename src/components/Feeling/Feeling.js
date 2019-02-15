@@ -62,11 +62,11 @@ class Feelings extends Component {
 
                         </CardContent>
                         <CardActions>
-
+                        <Grid container justify="center">
                             <Button id='feeling-next-btn' onClick={this.handleNextButton} variant='contained' color='primary'>
                                 Next
                             </Button>
-
+                        </Grid>
                         </CardActions>
 
                     </Card>

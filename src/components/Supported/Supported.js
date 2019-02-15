@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Review from './../Review/Review.js';
 //Material UI
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -24,7 +25,7 @@ class Supported extends Component {
     handleNextButton = (event) => {
         event.preventDefault();
         if (this.state.response !== '') {
-            const action = {type: 'SUBMIT_SUPPORT', payload: this.state.response};
+            const action = { type: 'SUBMIT_SUPPORT', payload: this.state.response };
             this.props.dispatch(action);
             this.props.history.push('/comments');
         } else {
@@ -40,7 +41,7 @@ class Supported extends Component {
 
     render() {
         console.log(this.state.response);
-        return(
+        return (
             <div>
                 <Card>
                     <CardContent>
@@ -60,14 +61,16 @@ class Supported extends Component {
 
                     </CardContent>
                     <CardActions>
-                    <Button id='supported-next-btn' onClick={this.handleNextButton} variant='contained' color='primary'>
-                        Next
-                    </Button>
+                        <Grid container justify="center">
+                            <Button id='supported-next-btn' onClick={this.handleNextButton} variant='contained' color='primary'>
+                                Next
+                            </Button>
+                        </Grid>
                     </CardActions>
                 </Card>
                 <Card>
                     <CardContent>
-                        <Review /> 
+                        <Review />
                     </CardContent>
                 </Card>
             </div>
