@@ -10,7 +10,8 @@ npm run client
 
 ### TECHNOLOGY USED
 
-This app uses JavaScript's React framework, including Redux.js. The database was created using PostgreSQL.
+This app uses JavaScript's React framework, including Redux.js. Styling was done with Material UI and CSS. The database was created using PostgreSQL.
+
 ### Description
 
 > NOTE: As a baseline requirement, you must use Redux to store your data across views.
