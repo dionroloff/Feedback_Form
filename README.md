@@ -14,11 +14,10 @@ This app uses JavaScript's React framework, including Redux.js. Styling was done
 
 ### Description
 
-> NOTE: As a baseline requirement, you must use Redux to store your data across views.
-
 This is a multi-part form that allows users to leave feedback for today. 
 There are 4 views for the form parts.
 The parts:
+
 - How are you feeling today?
 
 - How well are you understanding the content?
