@@ -1,4 +1,4 @@
-This app is a feedback form modeled after Prime Digital Academy's system. Feedback will be collected over 4 views, and when all steps are complete, the app will save the feedback in the database. The review component, which is present at all times, will display the current feedback values and a conditionally-rendered submit button. 
+# Redux Feedback Loop
 
 ### SETUP
 
@@ -11,3 +11,25 @@ npm run client
 ### TECHNOLOGY USED
 
 This app uses JavaScript's React framework, including Redux.js. The database was created using PostgreSQL.
+### Description
+
+> NOTE: As a baseline requirement, you must use Redux to store your data across views.
+
+This is a multi-part form that allows users to leave feedback for today. 
+There are 4 views for the form parts.
+The parts:
+- How are you feeling today?
+
+- How well are you understanding the content?
+
+- How well are you being supported?
+
+- Any comments you want to leave?
+
+## THE REVIEW COMPONENT
+
+In addition to the multi-step form, the app displays the results of each step clearly and at all times. 
+
+## SUBMIT THE FEEDBACK
+
+The `Review` portion contains a submit button which when clicked will submit the completed feedback to the server. 
